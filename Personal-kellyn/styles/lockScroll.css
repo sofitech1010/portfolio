@@ -1,0 +1,45 @@
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden !important;
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Ensure all elements respect container boundaries */
+* {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Force container to respect viewport width */
+.container {
+  width: 100% !important;
+  max-width: 100vw !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  overflow: hidden;
+}
+
+/* Handle background elements */
+.fixed, .absolute {
+  overflow: hidden;
+}
+
+/* Prevent animation overflow */
+.animate-gridMove,
+.animate-float,
+.animate-scan,
+.animate-pulse,
+.animate-glitch-1,
+.animate-glitch-2 {
+  overflow: hidden;
+}
+
+/* Ensure responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
